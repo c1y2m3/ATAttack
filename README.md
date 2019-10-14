@@ -94,7 +94,7 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 - 进入`ATAttack`目录,并通过upx压缩
 
-  `pyinstaller run.py --upx-dir=upx-3.95-win64`
+  `pyinstaller -F run.py --upx-dir=upx-3.95-win64`
 
 - 成功打包二进制控制台单文件`\ATAttack\dist]\run.exe`
 
