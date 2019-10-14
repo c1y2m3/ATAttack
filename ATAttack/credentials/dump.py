@@ -8,7 +8,7 @@ import os
 
 try:
     import _subprocess as sub
-    STARTF_USESHOWWINDOW = sub.STARTF_USESHOWWINDOW  # Not work on Python 3
+    STARTF_USESHOWWINDOW = sub.STARTF_USESHOWWINDOW
     SW_HIDE = sub.SW_HIDE
 except ImportError:
     STARTF_USESHOWWINDOW = subprocess.STARTF_USESHOWWINDOW
@@ -40,8 +40,6 @@ class samdump:
                         stderr=subprocess.STDOUT,
                         stdout=subprocess.PIPE,
                         universal_newlines=True)
-                    # p = subprocess.Popen(command, shell=True, stdin=subprocess.PIPE, stderr=subprocess.STDOUT,
-                    # stdout=subprocess.PIPE, universal_newlines=True)
                     results, _ = p.communicate()
                     sammhives.append(constant.hives[h])
             ntlm = dump_file_hashes(sammhives[0], sammhives[1])

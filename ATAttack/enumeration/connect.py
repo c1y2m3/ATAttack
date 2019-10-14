@@ -3,7 +3,6 @@
 
 from ATAttack.framework.prints import *
 import _winreg
-import getpass
 import subprocess
 import os
 

