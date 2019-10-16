@@ -94,7 +94,9 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 2、系统所搜索的敏感数据文件存储，暂命名为file_list.txt
 
-3、通过提取lsass进程所保存的内存文件，暂命令为lsass.dmp
+3、通过提取lsass进程所保存的内存文件，暂命名为lsass.dmp
+
+4、内网主机所识别对应的windows版本，归属于工作组或域主机消息，暂命名为os_version.txt
 
 ## 打包ATAttack二进制文件
 
