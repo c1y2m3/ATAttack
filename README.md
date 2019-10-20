@@ -49,7 +49,6 @@ python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
 5、在当前用户文件夹下查找指定文件，如word、pdf、txt、csv等
 
 
-
 ###### 二、主机网段收集:
 
 1、基于提取系统远程连接记录，如：远程桌面，arp缓存，windows系统日志(4624、4625)等
@@ -57,8 +56,6 @@ python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
 （浏览器浏览记录、单机系统记录，系统登录日志记录提取IP）
 
 2、主流浏览器浏览记录提取，通过位操作符判断筛选私有地址去重划分网段。
-
-
 
 ###### 三、凭证获取:
 
@@ -77,7 +74,6 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 4、第三方主机软件 ，如 Navicat、Putty ,foxmail在线解密 
 
 
-
 ###### 四、横向移动
 
 1、探测网段存活，如存活则识别windows 系统操作版本
@@ -85,7 +81,6 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 2、如系统版本为windows系统，则检测是否存在永恒之蓝漏洞
 
 3、基于解密出的ntlmhash，对存活主机进行pth哈希传递攻击，执行回显命令。
-
 
 
 ###### 五：数据回传
@@ -98,7 +93,9 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 2、系统所搜索的敏感数据文件存储，暂命名为file_list.txt
 
-3、通过提取lsass进程所保存的内存文件，暂命令为lsass.dmp
+3、通过提取lsass进程所保存的内存文件，暂命名为lsass.dmp
+
+4、内网主机所识别对应的windows版本，归属于工作组或域主机消息，暂命名为os_version.txt
 
 ## 打包ATAttack二进制文件
 
@@ -122,5 +119,8 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
   `pyinstaller -F exploit.py --upx-dir=upx-3.95-win64`
 
-- 成功打包二进制控制台单文件`\ATAttack\dist]\run.exe`
+- 成功打包二进制控制台单文件`\ATAttack\dist]\exploit.exe`
+
+## 已知故障和错误列表
+
 
