@@ -16,6 +16,10 @@
 
 ![](https://www.yunzhijia.com/microblog/filesvr/5da3eacf32f2ca14fb78c69e)
 
+win2008测试环境：
+
+![](https://www.yunzhijia.com/microblog/filesvr/5dac6de090144e463b1d6194)
+
 ##### 使用方法
 
 ###### cmd.exe

