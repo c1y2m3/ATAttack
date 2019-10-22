@@ -46,7 +46,7 @@ python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
 
 4、当前系统已安装程序列表获取 
 
-5、在当前用户文件夹下查找指定文件，如word、pdf、txt、csv等
+5、在当前用户文件夹下查找指定文件，如word、pdf、txt、csv等数据
 
 
 ###### 二、主机网段收集:
@@ -65,13 +65,13 @@ python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
 
 如失败则使用procdump提取lsa缓存进程，回传ftp，半自动化离线解密  
 
-3、通过netsh 导出系统 wifi密码、Windows Vaults 密码提取，
+3、通过netsh 导出系统 wifi密码、Windows Vaults 密码提取，[未完成]
 
-3、主流浏览器存储密码在线|离线模式解密,目前覆盖chrome、360chrome、ie，
+3、主流浏览器存储密码在线|离线模式解密,目前覆盖chrome、360chrome、ie,fiefox
 
 fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密，回传文件离线解密。
 
-4、第三方主机软件 ，如 Navicat、Putty ,foxmail在线解密 
+4、第三方主机软件 ，如 Navicat、Putty ,foxmail在线解密 [未完成]
 
 
 ###### 四、横向移动
@@ -95,7 +95,7 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 3、通过提取lsass进程所保存的内存文件，暂命名为lsass.dmp
 
-4、内网主机所识别对应的windows版本，归属于工作组或域主机消息，暂命名为os_version.txt
+4、内网主机所识别对应的windows版本，归属于工作组或域主机信息，暂命名为os_version.txt
 
 ## 打包ATAttack二进制文件
 
