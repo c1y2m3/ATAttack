@@ -13,7 +13,7 @@ temp_list = []
 
 
 def get_platform():
-    return platform.machine()
+    return platform.uname()
 
 
 def disk():
@@ -31,6 +31,7 @@ def tasklist():
     tasklist = re.findall(r'\w+.exe', load, re.S)
     ing = []
     print_success('Current Machine Existence ' + str(disk()))
+    print_success('Current system version'+ str(get_platform()))
     try:
         for av in constant.av_json.keys():
             for task in tasklist:
