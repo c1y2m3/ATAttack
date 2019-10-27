@@ -115,7 +115,6 @@ class Software:
             pass
         self.get_360c_history()
         output.get_decypt_360chrome()
-
         try:
             if re.findall('Navicat+', Installation, re.S):
                 print "[*] Attempting to decrypt Navicat"

