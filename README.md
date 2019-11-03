@@ -14,7 +14,7 @@
 
 ###### win10测试环境
 
-![微信截图_20191103111737](C:\Users\c1y2m3\Desktop\微信截图_20191103111737.png)
+![](https://www.yunzhijia.com/microblog/filesvr/5dbe4d62b54c8d19b5579f55)
 
 win2008测试环境：
 
