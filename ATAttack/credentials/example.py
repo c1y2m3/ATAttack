@@ -34,5 +34,3 @@ def psexec(command,target, ntlmhash,File):
         objes.run(target)
     except Exception :
         pass
-
-

