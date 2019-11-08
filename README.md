@@ -18,7 +18,7 @@
 
 win2008测试环境：
 
-![](https://www.yunzhijia.com/microblog/filesvr/5dac6de090144e463b1d6194)
+![](https://www.yunzhijia.com/microblog/filesvr/5dc59c7d28011f682aaec035)
 
 ##### 使用方法
 
@@ -120,4 +120,4 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 ## 已知故障和错误列表
 
-- subprocess模块无法兼容Cobalt strike
+- 

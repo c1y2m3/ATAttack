@@ -5,22 +5,19 @@ from ATAttack.framework.prints import *
 import _winreg
 import os
 
-
 key = r"Software\Microsoft\Terminal Server Client\Servers"
-open_key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER, key)
-countkey = _winreg.QueryInfoKey(open_key)[0]
 values = []
 K = 0
-
-
 
 class login_():
 
     @staticmethod
-
     def ListLogged_inUsers():
         # User = getpass.getuser()
+
         try:
+            open_key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER, key)
+            countkey = _winreg.QueryInfoKey(open_key)[0]
             for i in range(int(countkey)):
                 db = _winreg.EnumKey(open_key, i)
                 servers = _winreg.OpenKey(
@@ -35,7 +32,7 @@ class login_():
             pass
 
     # ListAllUsers RDP Connections History
-    def powershell(self,cmd):
+    def powershell(self, cmd):
         powershell = os.popen(r"powershell.exe " + cmd).read()
         stdout = powershell.split('\n')
         return stdout
@@ -71,7 +68,7 @@ class login_():
                     for www in num:
                         if num[www] == id:
                             # print "SID :" + id
-                            values.append(dbs + "|" + value )
+                            values.append(dbs + "|" + value)
                             # print "User:" + www + ":" + value + ":" + dbs
             except WindowsError:
                 pass
@@ -83,4 +80,3 @@ class login_():
         print_warning("ListAllUsers RDP Connections History")
         self.AllUser()
         print list(set(values))
-

@@ -44,16 +44,16 @@ class Software:
         reg_root = win32con.HKEY_CURRENT_USER
         reg_path = r"Software\\Microsoft\\Internet Explorer\\typedURLs"
         reg_flags = win32con.WRITE_OWNER | win32con.KEY_WOW64_64KEY | win32con.KEY_ALL_ACCESS
-        key = win32api.RegOpenKeyEx(reg_root, reg_path, 0, reg_flags)
         try:
+            key = win32api.RegOpenKeyEx(reg_root, reg_path, 0, reg_flags)
             i = 0
             while True:
                 url = (win32api.RegEnumValue(key, i))
                 command_list.append(url[1])
                 i += 1
+                win32api.RegCloseKey(key)
         except Exception:
             pass
-        win32api.RegCloseKey(key)
         return command_list
 
     def get_Firefox_history(self):

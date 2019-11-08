@@ -4,11 +4,9 @@
     <list default="true" id="d9846dbd-d6c2-43ee-87d6-55de1c7a15d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exploit.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exploit.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exploit.py" beforeDir="false" afterPath="$PROJECT_DIR$/exploit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/utility/browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/utility/browser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/utility/decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/utility/decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploit.exe" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ATAttack$connect.coverage" NAME="connect Coverage Results" MODIFIED="1573206167912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
+    <SUITE FILE_PATH="coverage/ATAttack$connect.coverage" NAME="connect Coverage Results" MODIFIED="1573228069355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
     <SUITE FILE_PATH="coverage/ATAttack$uninstall.coverage" NAME="uninstall Coverage Results" MODIFIED="1573208480360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
     <SUITE FILE_PATH="coverage/ATAttack$tasklist.coverage" NAME="tasklist Coverage Results" MODIFIED="1573197182214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
+    <SUITE FILE_PATH="coverage/ATAttack$redis_slaveeof_rce.coverage" NAME="redis_slaveeof_rce Coverage Results" MODIFIED="1573211267063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce" />
+    <SUITE FILE_PATH="coverage/ATAttack$decrypt.coverage" NAME="decrypt Coverage Results" MODIFIED="1573222926745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/utility" />
     <SUITE FILE_PATH="coverage/ATAttack$exploit.coverage" NAME="exploit Coverage Results" MODIFIED="1573201434233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/connect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="229">
+              <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
               <folding>
                 <element signature="e#39#78#0" expanded="true" />
               </folding>
@@ -61,15 +61,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/my_entry.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/my_entry.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ATAttack/utility/decrypt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4761">
+              <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+              <folding>
+                <element signature="e#51#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+            <state relative-caret-position="3197">
+              <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -94,6 +119,7 @@
       <find>Current Machine Existence</find>
       <find>tasklist</find>
       <find>Successful acquisition of administrator ntlmhash</find>
+      <find>K</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -108,14 +134,16 @@
         <option value="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" />
         <option value="$PROJECT_DIR$/exploit.py" />
         <option value="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" />
-        <option value="$PROJECT_DIR$/ATAttack/enumeration/connect.py" />
         <option value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py" />
+        <option value="$PROJECT_DIR$/ATAttack/utility/decrypt.py" />
+        <option value="$PROJECT_DIR$/ATAttack/utility/browser.py" />
+        <option value="$PROJECT_DIR$/ATAttack/enumeration/connect.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="285" />
-    <option name="y" value="84" />
+    <option name="x" value="61" />
+    <option name="y" value="110" />
     <option name="width" value="1435" />
     <option name="height" value="966" />
   </component>
@@ -190,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.uninstall">
+  <component name="RunManager" selected="Python.connect">
     <configuration name="connect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,6 +233,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/enumeration/connect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="decrypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ATAttack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ATAttack/utility" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/utility/decrypt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,7 +285,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tasklist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="redis_slaveeof_rce" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,12 +293,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ATAttack/enumeration" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,10 +331,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.uninstall" />
         <item itemvalue="Python.connect" />
+        <item itemvalue="Python.decrypt" />
+        <item itemvalue="Python.redis_slaveeof_rce" />
+        <item itemvalue="Python.uninstall" />
         <item itemvalue="Python.exploit" />
-        <item itemvalue="Python.tasklist" />
       </list>
     </recent_temporary>
   </component>
@@ -301,23 +352,25 @@
       <workItem from="1572750412332" duration="1868000" />
       <workItem from="1573196863146" duration="4965000" />
       <workItem from="1573204201213" duration="6300000" />
-      <workItem from="1573211062168" duration="106000" />
+      <workItem from="1573211062168" duration="645000" />
+      <workItem from="1573222793954" duration="877000" />
+      <workItem from="1573227660522" duration="2050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13239000" />
+    <option name="totallyTimeSpent" value="16705000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="285" y="84" width="1435" height="966" extended-state="0" />
+    <frame x="61" y="110" width="1435" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3946136" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3946136" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,13 +406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -426,6 +472,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/my_entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3197">
+          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/tasklist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -436,23 +496,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/connect.py">
+    <entry file="file://$PROJECT_DIR$/ATAttack/utility/decrypt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="4761">
+          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
           <folding>
-            <element signature="e#39#78#0" expanded="true" />
+            <element signature="e#51#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/my_entry.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py">
+    <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        <state relative-caret-position="-1">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/connect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+          <folding>
+            <element signature="e#39#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
