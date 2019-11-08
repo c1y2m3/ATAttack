@@ -6,8 +6,9 @@ import string
 import os
 import re
 import json
+import ctypes
 from ATAttack.framework.constant import constant
-from ATAttack.framework.prints import print_success
+from ATAttack.framework.prints import print_success,print_info
 
 temp_list = []
 
@@ -15,6 +16,8 @@ temp_list = []
 def get_platform():
     return platform.uname()
 
+def admin():
+    return bool(ctypes.windll.shell32.IsUserAnAdmin())
 
 def disk():
 
@@ -27,6 +30,10 @@ def disk():
 
 
 def tasklist():
+
+    if not admin():
+        exit()
+        print_info("Cannot proceed, maybe you don't have enough permission")
     load = os.popen('tasklist').read()
     tasklist = re.findall(r'\w+.exe', load, re.S)
     ing = []
@@ -51,10 +58,7 @@ def token():
     try:
 
         for tasklist in tasklist_v_fo_csv_list:
-            tasklist = tasklist.replace(
-                "[", "").replace(
-                "]", "").replace(
-                "\"", "")
+            tasklist = tasklist.replace("[", "").replace("]", "").replace("\"", "")
             temp = tasklist.split(",")
             sessions = re.findall('[a-zA-Z]+.+', temp[7], re.S)
             if sessions:
@@ -66,3 +70,4 @@ def token():
         pass
     finally:
         return ([i for i in list(set(temp_list)) if i != ''])
+

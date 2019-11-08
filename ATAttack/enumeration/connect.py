@@ -3,7 +3,6 @@
 
 from ATAttack.framework.prints import *
 import _winreg
-import subprocess
 import os
 
 
@@ -37,19 +36,15 @@ class login_():
 
     # ListAllUsers RDP Connections History
     def powershell(self,cmd):
-
-        arg = [r"powershell.exe", cmd]
-        ps = subprocess.Popen(arg, stdout=subprocess.PIPE)
-        user = ps.stdout.read()
-        Write = user.split('\n')
-        return Write
+        powershell = os.popen(r"powershell.exe " + cmd).read()
+        stdout = powershell.split('\n')
+        return stdout
 
     def AllUser(self):
 
         cmd = "$AllUser = Get-WmiObject -Class Win32_UserAccount;" \
               "foreach($User in $AllUser)" \
               "{Write-Host $User.Caption};"
-
         cmder = "$AllUser = Get-WmiObject -Class Win32_UserAccount;" \
             "foreach($User in $AllUser)" \
             "{Write-Host $User.SID};"

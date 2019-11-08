@@ -1,22 +1,23 @@
-import subprocess
+import os
 import json
 
 def powershell(cmd):
 
-    arg = [r"powershell.exe", cmd]
-    ps = subprocess.Popen(arg, stdout=subprocess.PIPE)
-    num = ps.stdout.read().decode('gbk')
+    arg = r"powershell.exe " + cmd
+    powershell_ = os.popen(arg).read()
+    num = powershell_.decode('gbk')
     write = num.split('\r\n')
     return write
 
 
 def query_results():
-    apply = []
+    list_ = []
     version = [
         r'HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\\',
         r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\']
-    for x in version:
-        QueryPath = r'$RegPath = "Registry::{}\\";'.format(
-            x) + '$QueryPath = dir $RegPath -Name;' + 'foreach($Name in $QueryPath)' + '{(Get-ItemProperty -Path $RegPath$Name).DisplayName}'
-        apply.append(powershell(QueryPath))
-    return json.dumps(apply, encoding="UTF-8", ensure_ascii=False)
+    for os in version:
+        query = r"$RegPath = 'Registry::{}\\';".format(os)+ '$QueryPath = dir $RegPath -Name;' \
+                    + 'foreach($Name in $QueryPath)' + '{(Get-ItemProperty -Path $RegPath$Name).DisplayName}'
+        list_.append(powershell(query))
+    return json.dumps(list_, encoding="UTF-8", ensure_ascii=False)
+
