@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9846dbd-d6c2-43ee-87d6-55de1c7a15d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/http_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/credentials/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/credentials/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/credentials/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/credentials/example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/credentials/smbexec.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/credentials/yhzldb.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/credentials/yhzldb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/host.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/host.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/enumeration/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/enumeration/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/framework/constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/framework/constant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/tmp/lsass.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATAttack/tmp/navicatpwd.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ATAttack/utility/browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/utility/browser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATAttack/utility/decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/ATAttack/utility/decrypt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exploit.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploit.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exploit.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploit.py" beforeDir="false" afterPath="$PROJECT_DIR$/exploit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploit.spec" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +29,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ATAttack$domain_scan.coverage" NAME="domain_scan Coverage Results" MODIFIED="1574848473791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Desktop" />
     <SUITE FILE_PATH="coverage/ATAttack$connect.coverage" NAME="connect Coverage Results" MODIFIED="1573228069355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
+    <SUITE FILE_PATH="coverage/ATAttack$temp.coverage" NAME="temp Coverage Results" MODIFIED="1574607990510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ATAttack$uninstall.coverage" NAME="uninstall Coverage Results" MODIFIED="1573208480360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
     <SUITE FILE_PATH="coverage/ATAttack$tasklist.coverage" NAME="tasklist Coverage Results" MODIFIED="1573197182214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
     <SUITE FILE_PATH="coverage/ATAttack$redis_slaveeof_rce.coverage" NAME="redis_slaveeof_rce Coverage Results" MODIFIED="1573211267063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce" />
+    <SUITE FILE_PATH="coverage/ATAttack$upload.coverage" NAME="upload Coverage Results" MODIFIED="1574855365329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/enumeration" />
     <SUITE FILE_PATH="coverage/ATAttack$decrypt.coverage" NAME="decrypt Coverage Results" MODIFIED="1573222926745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ATAttack/utility" />
+    <SUITE FILE_PATH="coverage/ATAttack$http_put_server.coverage" NAME="http_put_server Coverage Results" MODIFIED="1574316281864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Desktop" />
     <SUITE FILE_PATH="coverage/ATAttack$exploit.coverage" NAME="exploit Coverage Results" MODIFIED="1573201434233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -27,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exploit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="425">
+              <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
               <folding>
                 <element signature="e#51#65#0" expanded="true" />
               </folding>
@@ -36,44 +54,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ATAttack/credentials/dump.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="25" />
-              <folding>
-                <element signature="e#34#96#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/connect.py">
+        <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/upload.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+            <state relative-caret-position="261">
+              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
               <folding>
-                <element signature="e#39#78#0" expanded="true" />
+                <element signature="e#50#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
+        <entry file="file://$PROJECT_DIR$/http_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state>
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="e#51#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/my_entry.py">
+        <entry file="file://$PROJECT_DIR$/http_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="-310">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/uninstall.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,31 +102,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ATAttack/utility/decrypt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4761">
-              <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+            <state relative-caret-position="-236">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
                 <element signature="e#51#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3197">
-              <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/tasklist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-              <folding>
-                <element signature="e#44#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,6 +120,23 @@
       <find>tasklist</find>
       <find>Successful acquisition of administrator ntlmhash</find>
       <find>K</find>
+      <find>_server</find>
+      <find>self._server</find>
+      <find>self.ftp</find>
+      <find>timeout</find>
+      <find>threads_num</find>
+      <find>verbose</find>
+      <find>version</find>
+      <find>print_lock</find>
+      <find>release</find>
+      <find>popen</find>
+      <find>filename</find>
+      <find>random_str</find>
+      <find>tmp</find>
+      <find>send_ttl</find>
+      <find>query_results</find>
+      <find>ipfind</find>
+      <find>temporary Storage Folder</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -131,21 +148,34 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" />
-        <option value="$PROJECT_DIR$/exploit.py" />
-        <option value="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" />
         <option value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py" />
         <option value="$PROJECT_DIR$/ATAttack/utility/decrypt.py" />
-        <option value="$PROJECT_DIR$/ATAttack/utility/browser.py" />
         <option value="$PROJECT_DIR$/ATAttack/enumeration/connect.py" />
+        <option value="$PROJECT_DIR$/http_put_server.py" />
+        <option value="$PROJECT_DIR$/output.txt" />
+        <option value="$PROJECT_DIR$/../Desktop/http_put_server.py" />
+        <option value="$PROJECT_DIR$/../AppData/Local/Temp/27112019_165820.tmp/os_version.txt" />
+        <option value="$PROJECT_DIR$/ATAttack/framework/constant.py" />
+        <option value="$PROJECT_DIR$/../Desktop/domain_scan.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/ATAttack/credentials/check.py" />
+        <option value="$PROJECT_DIR$/ATAttack/credentials/example.py" />
+        <option value="$PROJECT_DIR$/ATAttack/enumeration/tasklist.py" />
+        <option value="$PROJECT_DIR$/downloader.py" />
+        <option value="$PROJECT_DIR$/ATAttack/credentials/yhzldb.py" />
+        <option value="$PROJECT_DIR$/ATAttack/enumeration/host.py" />
+        <option value="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" />
+        <option value="$PROJECT_DIR$/ATAttack/utility/browser.py" />
+        <option value="$PROJECT_DIR$/exploit.py" />
+        <option value="$PROJECT_DIR$/ATAttack/enumeration/upload.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="61" />
-    <option name="y" value="110" />
-    <option name="width" value="1435" />
-    <option name="height" value="966" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="253" />
+    <option name="y" value="59" />
+    <option name="width" value="1341" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -168,31 +198,7 @@
               <item name="ATAttack" type="b2602c69:ProjectViewProjectNode" />
               <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
               <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATAttack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
               <item name="enumeration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATAttack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATAttack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATAttack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="ATAttack" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -205,6 +211,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -218,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.connect">
+  <component name="RunManager" selected="Python.upload">
     <configuration name="connect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,7 +248,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="decrypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="domain_scan" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,12 +256,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ATAttack/utility" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/utility/decrypt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/domain_scan.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,7 +270,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exploit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="http_put_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ATAttack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/http_put_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -276,7 +305,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exploit.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -285,29 +314,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="redis_slaveeof_rce" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ATAttack" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Desktop/python/exploit/redis_slaveeof_rce/redis_slaveeof_rce.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="uninstall" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="upload" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ATAttack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -320,7 +327,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/enumeration/uninstall.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ATAttack/enumeration/upload.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -331,16 +338,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.upload" />
+        <item itemvalue="Python.domain_scan" />
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.http_put_server" />
         <item itemvalue="Python.connect" />
-        <item itemvalue="Python.decrypt" />
-        <item itemvalue="Python.redis_slaveeof_rce" />
-        <item itemvalue="Python.uninstall" />
-        <item itemvalue="Python.exploit" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\c1y2m3\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -355,22 +362,32 @@
       <workItem from="1573211062168" duration="645000" />
       <workItem from="1573222793954" duration="877000" />
       <workItem from="1573227660522" duration="2050000" />
+      <workItem from="1573438065073" duration="443000" />
+      <workItem from="1574306936858" duration="12180000" />
+      <workItem from="1574388030645" duration="598000" />
+      <workItem from="1574403341052" duration="600000" />
+      <workItem from="1574418236554" duration="1984000" />
+      <workItem from="1574500266269" duration="4126000" />
+      <workItem from="1574602900159" duration="5299000" />
+      <workItem from="1574647447260" duration="5000" />
+      <workItem from="1574843670546" duration="10189000" />
+      <workItem from="1574862287030" duration="3805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16705000" />
+    <option name="totallyTimeSpent" value="55934000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="110" width="1435" height="966" extended-state="0" />
+    <frame x="253" y="59" width="1341" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2671698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3946136" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295063" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24282561" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,21 +404,45 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295063" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45924225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39929742" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/http_client.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ATAttack/framework/prints.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -409,65 +450,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.PyCharm2018.3/system/python_stubs/-762174762/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/framework/constant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
-          <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/uninstall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/Installed_Software.log" />
-    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/psexec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <folding>
-            <element signature="e#396#406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ATAttack/credentials/smbexec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-822">
           <folding>
             <element signature="e#1480#1490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exploit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#51#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/dump.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#34#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -486,42 +474,286 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/tasklist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding>
-            <element signature="e#44#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/utility/decrypt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4761">
-          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
-          <folding>
-            <element signature="e#51#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/connect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        <state relative-caret-position="598">
+          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding>
             <element signature="e#39#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/http_put_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.txt" />
+    <entry file="file://$PROJECT_DIR$/../.PyCharm2018.3/system/python_stubs/-762174762/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="511" column="4" selection-start-line="511" selection-start-column="4" selection-end-line="511" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/psexec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-966">
+          <folding>
+            <element signature="e#396#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppData/Roaming/Python/Python27/site-packages/tqdm/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/framework/prints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_put_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppData/Local/Temp/24112019_222714.tmp/os_version.txt" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/threading.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="149" column="12" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/python-tools/SSRFExploit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="59" selection-start-line="59" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppData/Local/Temp/27112019_165820.tmp/os_version.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4798">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppData/Roaming/Python/Python27/site-packages/nmap/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-733">
+          <folding>
+            <element signature="e#1165#1192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AppData/Roaming/Python/Python27/site-packages/nmap/nmap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/domain_scan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#51#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" selection-start-line="9" selection-start-column="2" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#68#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/tasklist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding>
+            <element signature="e#44#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/framework/constant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/downloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#51#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="e#52#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/host.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/yhzldb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/credentials/dump.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="e#34#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/utility/browser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="98" column="20" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+          <folding>
+            <element signature="e#52#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/uninstall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/utility/decrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#51#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#51#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exploit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
+          <folding>
+            <element signature="e#51#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ATAttack/enumeration/upload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding>
+            <element signature="e#50#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

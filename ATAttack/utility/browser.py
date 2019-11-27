@@ -6,7 +6,7 @@ import win32api
 import win32con
 from ATAttack.utility.decrypt import *
 from ATAttack.framework.constant import constant
-from ATAttack.enumeration.uninstall import query_results
+from ATAttack.enumeration.uninstall import regedit
 
 
 command_list = []
@@ -95,7 +95,7 @@ class Software:
 
     def run(self):
 
-        Installation = query_results()
+        Installation = regedit()
         output = decypt()
         print '[*] Finding histroy in ie'
         self.get_ie_history()

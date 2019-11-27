@@ -30,7 +30,6 @@ def print_status(ip, message):
     with print_lock:
         print "[*] [%s] %s" % (ip, message)
 
-
 def check_ip(ip):
     global negotiate_protocol_request, session_setup_request, tree_connect_request, trans2_session_setup, timeout, verbose
 
@@ -61,7 +60,7 @@ def check_ip(ip):
     # Extract user ID from session setup response
     user_id = session_setup_response[32:34]
     if verbose:
-        print_st(ip, "User ID = %s" % struct.unpack("<H", user_id)[0])
+        print(ip, "User ID = %s" % struct.unpack("<H", user_id)[0])
 
     os = ''
     word_count = ord(session_setup_response[36])

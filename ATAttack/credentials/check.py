@@ -10,9 +10,8 @@ from ATAttack.credentials.yhzldb import check_ip
 from ATAttack.credentials.example import psexec
 from ATAttack.framework.constant import constant
 
-timeout = 1
+
 threads = 150
-verbose = ''
 threads_num = int(threads)
 semaphore = threading.BoundedSemaphore(value=threads_num)
 print_lock = threading.Lock()
@@ -36,7 +35,6 @@ class ipadders():
         net_c = self.ip_into_int('192.168.255.255') >> 16
         return ip >> 24 == net_a or ip >> 20 == net_b or ip >> 16 == net_c
 
-
 def _check(ip):
     try:
         host_name, group_type = _get_host_name(str(ip))
@@ -58,7 +56,7 @@ def _check(ip):
         version.append(result)
         for os in version:
             with open(constant.tmp_name__, "a") as file:
-                file.writelines(os + '\r\n')
+                file.writelines(os + '\n')
             file.close()
         return ip, result
     except Exception:
@@ -89,7 +87,6 @@ def _get_host_name(ip):
     except BaseException:
         return host_name, group_type
 
-
 def _thread(ip_address,dump):
 
     global semaphore
@@ -103,7 +100,6 @@ def _thread(ip_address,dump):
             pass
     finally:
         semaphore.release()
-
 
 def smb_version(network,dump):
     # sam = dump()

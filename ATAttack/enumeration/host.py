@@ -9,6 +9,7 @@ import Queue
 adder = []
 queue = Queue.Queue()
 
+
 class ThreadUrl(threading.Thread):
     def __init__(self, queue):
         threading.Thread.__init__(self)
@@ -28,18 +29,17 @@ class ThreadUrl(threading.Thread):
                                  )
             result = p.stdout.read().decode('cp936').encode('utf-8').strip()
             if "TTL=" in result:
-                ipadder = host.split(
-                    '.')[0] + '.' + host.split('.')[1] + '.' + host.split('.')[2] + ".1/24"
+                ipadder = host.split('.')[0] + '.' + host.split('.')[1] + '.' + host.split('.')[2] + ".1/24"
                 adder.append(ipadder)
             self.queue.task_done()
 
-def send_ttl(b):
+def ipfind(cidr):
 
     for i in range(100):
         t = ThreadUrl(queue)
         t.setDaemon(True)
         t.start()
-    for host in b:
+    for host in cidr:
         queue.put(host)
     queue.join()
     return adder

@@ -9,8 +9,7 @@ def powershell(cmd):
     write = num.split('\r\n')
     return write
 
-
-def query_results():
+def regedit():
     list_ = []
     version = [
         r'HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\\',
