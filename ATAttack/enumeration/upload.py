@@ -84,6 +84,7 @@ class upload(object):
         except Exception as e:
             print e.message
 
+
     def HTTPdownload(self,url, filename='output.txt'):
         '''
         下载接口
@@ -97,6 +98,7 @@ class upload(object):
                 if chunk:
                     fd.write(chunk)
         return filename
+
 
     def get_FileSize(self,filePath):
         fsize = os.path.getsize(filePath)

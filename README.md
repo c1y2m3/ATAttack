@@ -91,6 +91,8 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 3、基于解密出的ntlmhash，对存活主机进行pth哈希传递攻击，执行回显命令。
 
+4、如系统为linux则对ssh端口服务进行探测，并进行爆破ssh弱口令。
+
 
 ###### 五：数据回传
 
@@ -100,11 +102,11 @@ fiefox浏览器解密基于key3.db、key4.db，logins.json文件，密钥加密�
 
 1、系统所安装的浏览器浏览历史记录，暂命名为update.log
 
-2、系统所搜索的敏感数据文件存储，暂命名为file_list.txt
+2、系统所搜索的敏感数据文件存储，暂命名为drive.txt
 
 3、通过提取lsass进程所保存的内存文件，暂命名为lsass.dmp
 
-4、内网主机所识别对应的windows版本，归属于工作组或域主机信息，暂命名为os_version.txt
+4、内网主机所识别对应的windows版本，归属于工作组或域主机信息，暂命名为host.txt
 
 ## 打包ATAttack二进制文件
 
