@@ -41,7 +41,9 @@ class attak():
 
     def __init__(self):
         self.port = int(22)
-        self.timeout = 2
+        self.timeout = 5
+        self.DIC_USER = ['root', 'oracle', ]
+        self.DIC_PASSWD = ['root', 'oracle', 'toor']
 
     def _check(self,ip):
         try:
@@ -127,20 +129,19 @@ class attak():
 
     def _creakssh(self,host):
         try:
-            DIC_USER = ['root', 'oracle']
-            DIC_PASSWD = ['root', 'oracle',]
-            # paramiko.util.log_to_file("filename.log")
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            ssh.connect(host, self.port, '', '', timeout=self.timeout)
+            ssh.connect(host, self.port, '', '',timeout=self.timeout)
             ssh.close()
         except Exception as e:
-            try:
-                if 'Authentication' in str(e):
-                    for user in DIC_USER:
-                        for passwd in DIC_PASSWD:
-                            ssh.connect(host, self.port, user, passwd, timeout=2)
-                            print_success(host + " ssh Weak account: {user}:{passwd}".format(user=user, passwd=passwd))
-            except Exception as e:
-                pass
-                ssh.close()
+            if 'Authentication' in str(e):
+                for user in self.DIC_USER:
+                    for pwd in self.DIC_PASSWD:
+                        try:
+                            ssh.connect(host, self.port, user, pwd, timeout=3)
+                            print_success(host + " ssh Weak account: {user}:{passwd}".format(user=user, passwd=pwd))
+                            ssh.close()
+                            break
+                        except Exception as e:
+                            pass
+                            ssh.close()

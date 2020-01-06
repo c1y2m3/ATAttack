@@ -12,7 +12,6 @@ from ATAttack.framework.prints import print_success,print_info
 
 temp_list = []
 
-
 def get_platform():
     return platform.uname()
 
@@ -28,10 +27,7 @@ def disk():
             disk_list.append(disk)
     return disk_list
 
-
 def tasklist():
-
-
     if not admin():
         exit()
         print_info("Cannot proceed, maybe you don't have enough permission")
