@@ -9,6 +9,7 @@
 **ATAttack**是一款后渗透半自动化侦察工具，它从进攻性和防御性安全角度执行许多面向安全性的主机调查“安全检查”。
 
 项目地址：https://github.com/c1y2m3/ATAttack
+![](http://raw.githubusercontent.com/c1y2m3/ATAttack/master/doc/snapshot.jpg)
 ## 已知故障和错误列表
 
 - 系统容错问题，增加部分功能异常处理，提高稳定性。
