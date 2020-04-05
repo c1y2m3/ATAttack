@@ -7,7 +7,6 @@ import argparse
 import random
 import string
 
-
 def s_rangdom():
     return ''.join(random.sample(string.ascii_letters + string.digits,8))
 

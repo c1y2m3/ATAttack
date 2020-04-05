@@ -1,5 +1,7 @@
 from __future__ import print_function
 from colorama import init, Fore
+import random
+import string
 
 init(convert=True)
 
@@ -41,3 +43,5 @@ def print_warning(message):
     print(Fore.YELLOW + " [!] " + Fore.RESET + message)
     Constant.output.append(("warning", message))
 
+def s_rangdom():
+    return ''.join(random.sample(string.ascii_letters + string.digits,8))

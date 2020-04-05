@@ -43,7 +43,7 @@ class attak():
         self.port = int(22)
         self.timeout = 5
         self.DIC_USER = ['root', 'oracle', ]
-        self.DIC_PASSWD = ['root', 'oracle', 'toor']
+        self.DIC_PASSWD = ['root', 'oracle',]
 
     def _check(self,ip):
         try:

