@@ -14,7 +14,7 @@ enum34==1.1.6
 Flask==1.1.1
 future==0.18.2
 idna==2.8
-impacket==0.9.20
+impacket==0.9.23
 ipaddress==1.0.23
 itsdangerous==1.1.0
 Jinja2==2.10.3
