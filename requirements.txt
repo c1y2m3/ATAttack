@@ -21,7 +21,7 @@ Jinja2==2.10.3
 ldap3==2.5.1
 ldapdomaindump==0.9.1
 MarkupSafe==1.1.1
-paramiko==2.7.1
+paramiko==2.10.1
 pefile==2019.4.18
 pipreqs==0.4.10
 pyasn1==0.4.8
